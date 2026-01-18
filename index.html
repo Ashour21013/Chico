@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Lustiger Hund 🐶</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ffcc70, #ff8177);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        img {
+            width: 300px;
+            animation: bounce 2s infinite;
+        }
+
+        /* Lustige Hüpf-Animation */
+        @keyframes bounce {
+            0%   { transform: translateY(0) rotate(0deg); }
+            25%  { transform: translateY(-30px) rotate(5deg); }
+            50%  { transform: translateY(0) rotate(0deg); }
+            75%  { transform: translateY(-15px) rotate(-5deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff6f61;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff3b2e;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Amo Chico 🐕</h1>
+
+    <!-- Hier dein Hundebild einfügen -->
+    <img src="hund.png" alt="Mein Hund">
+
+    <!-- Song -->
+    <audio id="song" src="song.mp3"></audio>
+
+    <button onclick="playSong()">🎵 Song abspielen</button>
+
+    <script>
+        function playSong() {
+            const song = document.getElementById("song");
+            song.play();
+        }
+    </script>
+
+</body>
+</html>
